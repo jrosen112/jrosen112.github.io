@@ -1,11 +1,14 @@
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
-<footer class="bg-light text-center text-lg-start">
-            <div class="text-center p-3">
-                This is my basic footer. Please update soon!
-            </div>
-        </footer>
-        `;
+    <link rel="stylesheet" href="footer_style.css" />
+    <footer>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+`;
 
 class Footer extends HTMLElement {
     constructor() {

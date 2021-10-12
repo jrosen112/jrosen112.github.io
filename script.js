@@ -24,3 +24,43 @@ function toggle_nightmode(element) {
         night_mode = false;
     }
 }
+
+(function() {
+    var doc_element = document.documentElement;
+    var w = window;
+
+    var prevScroll = w.scrollY || doc_element.scrollTop;
+    var currScroll;
+    var direction = 0;
+    var prevDirection = 0;
+    var header = document.getElementById('header-component');
+
+    var checkScroll = () => {
+        /*
+        ** Find direction of scroll:
+        ** 0 intial, 1 up, 2 down
+        */
+       currScroll = w.scrollY || doc_element.scrollTop;
+       if(currScroll > prevScroll) {
+           // scrolled up
+           direction = 2;
+       } else if(currScroll < prevScroll) {
+           direction = 1;
+       }
+       if(direction !== prevDirection) {
+           toggleHeader(direction, currScroll);
+       }
+       prevScroll = currScroll;
+    };
+
+    var toggleHeader = (direction, currScroll) => {
+        if(direction === 2 && currScroll > 40) {
+            header.classList.add('hide');
+            prevDirection = direction;
+        } else if(direction === 1) {
+            header.classList.remove('hide');
+            prevDirection = direction;
+        }
+    };
+    window.addEventListener('scroll', checkScroll);
+})();

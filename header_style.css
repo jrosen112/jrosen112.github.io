@@ -1,0 +1,33 @@
+nav {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #4d4dd0;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	font-family: monospace;
+	color: coral;
+}
+
+ul li {
+	list-style: none;
+	display: inline;
+}
+
+a {
+	font-weight: 700;
+	margin: 0 15px;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	padding-bottom: 5px;
+	box-shadow: inset 0 -2px 0 coral;
+}
