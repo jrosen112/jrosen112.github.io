@@ -1,11 +1,11 @@
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
-    <link rel="stylesheet" href="footer_style.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/footer_style.css" />
     <footer>
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Back to Top</a></li>
         </ul>
     </footer>
 `;

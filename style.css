@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 nav {
 	height: 40px;
 	display: flex;
@@ -7,7 +11,11 @@ nav {
 }
 
 p {
-	font-size: 60px;
+	font-size: 100px;
+}
+
+p#demo {
+	margin-top: 80px;
 }
 
 ul {
@@ -30,6 +38,23 @@ a {
 	text-decoration: none;
 }
 
+h1.display-3 {
+	padding-bottom: 20px;
+}
+
+p.lead {
+	margin-bottom: 0px;
+}
+
+a#main-button {
+	padding-top: 10px;
+	height: 50px;
+}
+
+div.container-fluid {
+	font-family: monospace;
+}
+
 a:hover {
 	padding-bottom: 5px;
 	box-shadow: inset 0 -2px 0 0 #333;
@@ -41,11 +66,15 @@ a:hover {
 	width: 100%;
 	top: 0;
 	z-index: 100;
-	/* transition: all 1s ease; */
-	transition: all 0.7s ease;
+	transition: all 0.5s ease;
 }
 
 #header-component.hide {
 	top: -40px;
-	transition: all 0.7s ease;
+	transition: all 0.5s ease;
+	opacity: 0%;
+}
+
+header.jumbotron {
+	padding-top: 100px;
 }
