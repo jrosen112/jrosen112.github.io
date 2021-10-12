@@ -64,3 +64,10 @@ function toggle_nightmode(element) {
     };
     window.addEventListener('scroll', checkScroll);
 })();
+
+var addCards = () => {
+    const container = document.getElementById('services');
+    var cards = [];
+    cardHTML = `
+    `;
+};
