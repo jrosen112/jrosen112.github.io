@@ -1,30 +1,3 @@
-flag = false;
-night_mode = false;
-
-function change_func(element) {
-    console.log("flag:", flag);
-    if(flag) {
-        element.style.color = "red";
-        flag = false;
-    } else {
-        element.style.color = "blue";
-        flag = true;
-    }
-}
-
-function toggle_nightmode(element) {
-    body = document.querySelector('body')
-    if(!night_mode) {
-        body.style.backgroundColor = "grey";
-        document.getElementById('night').innerText = "Night mode: activated"
-        night_mode = true;
-    } else {
-        body.style.backgroundColor = "white"
-        document.getElementById('night').innerHTML = "Night mode: deactivated"
-        night_mode = false;
-    }
-}
-
 (function() {
     var doc_element = document.documentElement;
     var w = window;
@@ -65,9 +38,42 @@ function toggle_nightmode(element) {
     window.addEventListener('scroll', checkScroll);
 })();
 
-var addCards = () => {
+$(function() {
+    console.log("jQuery");
+    // $("#header").load("/stylesheets/header_style.css");
+    $("#header").load("components/header.html");
+    $("<link>", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "./stylesheets/header_style.css"
+     }).appendTo("#header");
+});
+
+(function() {
     const container = document.getElementById('services');
     var cards = [];
-    cardHTML = `
-    `;
-};
+    // cardHTML = `
+    // <div class="col-md-4 mb-4">
+    //      <div class="card h-100">
+    //         <img class="card-img-top" src="design.jpg" alt="Design">
+    //         <div class="card-body">
+    //            <h4 class="card-title">Design</h4>
+    //            <p class="card-text">Deliver the best user experience 
+    //            with our carefully designed responsive websites and applications!</p>
+    //         </div>
+    //         <div class="card-footer py-4">
+    //            <a href="#" class="btn btn-secondary">See portfolio &raquo;</a>
+    //         </div>
+    //      </div>
+    //   </div>
+    // `;
+
+    // for (let i = 0; i < 3; i++) {
+    //     cardHTML = `
+    //     <div class="col-md-4 mb-4">
+    //         <div class="card h-100">
+    //     `;
+
+    // }
+    
+});
